@@ -7,9 +7,9 @@ public class TestMain {
 
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(TaskSchedulerConfig.class);
-//		ScheduledTaskService asyncTaskService = context.getBean(ScheduledTaskService.class);
-//		asyncTaskService.reportCurrentTime();
-//		asyncTaskService.fixTimeExecution();
+		ScheduledTaskService asyncTaskService = context.getBean(ScheduledTaskService.class);
+		asyncTaskService.reportCurrentTime();
+		asyncTaskService.fixTimeExecution();
 		
 		context.close();
 	}
