@@ -1,20 +1,20 @@
-package com.lanzhm.spring.ch2.testprofile;
+package com.lanzhm.spring.ch3.fortest;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 @Configuration
-public class ProfileConfig {
+public class TestConfig {
 	@Bean
 	@Profile("dev")
-	public DemoBean devDemoBean(){
-		return new DemoBean("from development profile");
+	public TestBean devTestBean(){
+		return new TestBean("from development profile");
 	}
 	
 	@Bean
 	@Profile("prod")
-	public DemoBean prodDemoBean(){
-		return new DemoBean("from production profile");
+	public TestBean prodTestBean(){
+		return new TestBean("from production profile");
 	}
 }
