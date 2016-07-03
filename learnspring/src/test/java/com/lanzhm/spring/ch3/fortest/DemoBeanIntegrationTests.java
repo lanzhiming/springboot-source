@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {TestConfig.class})
-@ActiveProfiles("prod")
+@ActiveProfiles("prod")//若使用@ActiveProfiles("dev")会报错
 public class DemoBeanIntegrationTests {
 	
 	@Autowired
